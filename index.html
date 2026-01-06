@@ -1,252 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alma Clara - Language, Learning & Self-Understanding</title>
-    <meta name="description" content="Reflections on language learning, personal growth, emotional expression, and Vedic Jyotish insights through Joy of Jyotish.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-       :root {
---dark-green-bg: #0C2F28
---active-green: #1F6B4B
---emerald-accent: #3AA782
---gold-primary: #E9B94C
---gold-light: #FFF7E3
---cream-text: #FBF6EE
---header-purple: #3B1639
---purple-support: #88608A
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alma Clara - Language, Learning & Self-Understanding</title>
+<meta name="description" content="Reflections on language learning, personal growth, emotional expression, and Vedic Jyotish insights through Joy of Jyotish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+--dark-green-bg: #0D2B1F;
+--active-green: #1A4D2E;
+--emerald-accent: #2E8B57;
+--gold-primary: #F4C430;
+--gold-light: #FFF2CC;
+--white: #FAFAFA;
+--cream-text: #F4C430;
+--charcoal: #1E3A2F;
+--link-color: #7EC8E3; /* Soft blue for better readability */
+--link-hover: #9BE7FF;
+--header-purple: #5A189A; /* Keep this for header gradient only */
+--shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+--shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
+* { 
+box-sizing: border-box; 
+margin: 0;
+padding: 0;
+}
 
-        * { 
-            box-sizing: border-box; 
-            margin: 0;
-            padding: 0;
-        }
+body {
+font-family: 'Lora', serif;
+background-color: var(--dark-green-bg);
+color: var(--cream-text);
+line-height: 1.8;
+overflow-x: hidden;
+}
 
-        body {
-            font-family: 'Lora', serif;
-            background-color: var(--dark-green-bg);
-            color: var(--cream-text);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
+header {
+text-align: center;
+padding: clamp(60px, 12vw, 120px) 20px;
+background: linear-gradient(135deg, var(--active-green) 0%, var(--header-purple) 50%, var(--gold-primary) 100%);
+}
 
-        header {
-            text-align: center;
-            padding: clamp(60px, 12vw, 120px) 20px;
-            background: linear-gradient(135deg, var(--active-green) 0%, var(--header-purple) 50%, var(--purple-support) 100%);
-        }
+.logo {
+font-family: 'Dancing Script', cursive;
+font-size: clamp(2.5rem, 8vw, 5rem);
+color: var(--gold-primary);
+margin-bottom: 1rem;
+text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
 
-        .logo {
-            font-family: 'Dancing Script', cursive;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            color: var(--gold-primary);
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
+.tagline {
+font-size: clamp(1.1rem, 3vw, 1.6rem);
+max-width: 800px;
+margin: 0 auto;
+font-style: italic;
+color: var(--gold-light);
+}
 
-        .tagline {
-            font-size: clamp(1.1rem, 3vw, 1.6rem);
-            max-width: 800px;
-            margin: 0 auto;
-            font-style: italic;
-            color: var(--gold-light);
-        }
+nav {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 2rem;
+padding: 2rem 1rem;
+background: rgba(13,43,31,0.9);
+backdrop-filter: blur(10px);
+position: sticky;
+top: 0;
+z-index: 100;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem 1rem;
-            background: rgba(13,43,31,0.9);
-            backdrop-filter: blur(10px);
-        }
+nav a {
+text-decoration: none;
+color: var(--cream-text);
+font-weight: 500;
+font-size: 1.1rem;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+transition: all 0.3s ease;
+border: 1px solid transparent;
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--cream-text);
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
+nav a:hover { 
+color: var(--gold-primary); 
+transform: translateY(-2px);
+background: rgba(244,196,48,0.1);
+border-color: var(--gold-primary);
+box-shadow: var(--shadow);
+}
 
-        nav a:hover { 
-            color: var(--gold-primary); 
-            transform: translateY(-2px);
-            background: rgba(244,196,48,0.1);
-            border-color: var(--gold-primary);
-            box-shadow: var(--shadow);
-        }
+section {
+padding: 5rem 1.5rem;
+max-width: 1000px;
+margin: 0 auto;
+scroll-margin-top: 80px;
+}
 
-        section {
-            padding: 5rem 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2rem, 5vw, 3rem);
+text-align: center;
+color: var(--gold-primary);
+margin-bottom: 3rem;
+text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
 
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            text-align: center;
-            color: var(--gold-primary);
-            margin-bottom: 3rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
+.welcome {
+text-align: center;
+font-size: 1.2rem;
+max-width: 700px;
+margin: 0 auto 4rem;
+color: var(--cream-text);
+}
 
-        .welcome {
-            text-align: center;
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-            color: var(--cream-text);
-        }
+.content {
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+font-size: 1.1rem;
+line-height: 1.9;
+color: var(--cream-text);
+}
 
-        .content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: var(--cream-text);
-        }
+.cta-link {
+display: inline-block;
+margin-top: 2rem;
+padding: 1rem 2rem;
+background: linear-gradient(135deg, var(--emerald-accent), var(--active-green));
+color: var(--white);
+text-decoration: none;
+border-radius: 8px;
+font-weight: 500;
+transition: all 0.3s ease;
+font-size: 1.1rem;
+box-shadow: var(--shadow);
+}
 
-        .cta-link {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, var(--emerald-accent), var(--active-green));
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            box-shadow: var(--shadow);
-        }
+.cta-link:hover { 
+transform: translateY(-2px);
+box-shadow: var(--shadow-hover);
+}
 
-        .cta-link:hover { 
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
+.astrology-link, .content a {
+color: var(--link-color);
+font-weight: 600;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: all 0.3s ease;
+}
 
-        .astrology-link {
-            color: var(--purple-support);
-            font-weight: 600;
-            text-decoration: none;
-        }
+.astrology-link:hover, .content a:hover {
+color: var(--link-hover);
+border-bottom: 1px solid var(--link-color);
+text-shadow: 0 0 8px rgba(126, 200, 227, 0.3);
+}
 
-        .astrology-link:hover {
-            text-decoration: underline;
-            text-shadow: 0 0 8px rgba(139,90,139,0.5);
-        }
+.disclaimer {
+margin-top: 2.5rem;
+font-style: italic;
+color: var(--gold-light);
+}
 
-        .disclaimer {
-            margin-top: 2.5rem;
-            font-style: italic;
-            color: var(--gold-light);
-        }
+#astrology {
+background: rgba(126, 200, 227, 0.08);
+border: 1px solid rgba(126, 200, 227, 0.3);
+border-radius: 16px;
+backdrop-filter: blur(10px);
+}
 
-        #astrology {
-            background: rgba(139,90,139,0.15);
-            border: 2px solid var(--purple-support);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-        }
+footer {
+text-align: center;
+padding: 3rem 1rem;
+background: rgba(13,43,31,0.9);
+font-size: 0.95rem;
+border-top: 1px solid var(--emerald-accent);
+color: var(--cream-text);
+}
 
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: rgba(13,43,31,0.9);
-            font-size: 0.95rem;
-            border-top: 1px solid var(--emerald-accent);
-            color: var(--cream-text);
-        }
+footer a {
+color: var(--gold-primary);
+text-decoration: none;
+font-weight: 500;
+transition: all 0.3s ease;
+}
 
-        footer a {
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
+footer a:hover {
+color: var(--link-color);
+text-decoration: underline;
+text-shadow: 0 0 8px rgba(126, 200, 227, 0.3);
+}
 
-        footer a:hover {
-            text-decoration: underline;
-            text-shadow: 0 0 8px rgba(244,196,48,0.5);
-        }
+html { 
+scroll-behavior: smooth; 
+}
 
-        html { 
-            scroll-behavior: smooth; 
-        }
+/* Animation for smooth appearance */
+section {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-        @media (max-width: 768px) {
-            nav { 
-                flex-direction: column; 
-                gap: 1rem; 
-            }
-            section { 
-                padding: 3rem 1rem; 
-            }
-        }
+section.visible {
+opacity: 1;
+transform: translateY(0);
+}
 
-        @media (max-width: 480px) {
-            header {
-                padding: 4rem 1rem;
-            }
-        }
-    </style>
+@media (max-width: 768px) {
+nav { 
+flex-direction: column; 
+gap: 1rem; 
+}
+section { 
+padding: 3rem 1rem; 
+}
+}
+
+@media (max-width: 480px) {
+header {
+padding: 4rem 1rem;
+}
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo" aria-label="Alma Clara Logo">Alma Clara</div>
-        <p class="tagline">Finding clarity, confidence, and expression through language, learning, and self-understanding.</p>
-    </header>
+<header>
+<div class="logo" aria-label="Alma Clara Logo">Alma Clara</div>
+<p class="tagline">Finding clarity, confidence, and expression through language, learning, and self-understanding.</p>
+</header>
 
-    <nav role="navigation" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#astrology">Astrology</a>
-    </nav>
+<nav role="navigation" aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#astrology">Vedic Insights</a>
+</nav>
 
-    <section id="home">
-        <div class="welcome">
-            <p>Welcome, Lovely Human! This is a gentle space for reflection on language, growth, and the quiet beauty of learning. Take a breath, linger here, and find what speaks to your heart.</p>
-        </div>
-    </section>
+<section id="home">
+<div class="welcome">
+<p>Welcome, Lovely Human! This is a gentle space for reflection on language, growth, and the quiet beauty of learning. Take a breath, linger here, and find what speaks to your heart.</p>
+</div>
+</section>
 
-    <section id="about">
-        <h2>About Alma Clara</h2>
-        <div class="content">
-            <p>Curated by <a href="https://amigosolutions.github.io" class="astrology-link" target="_blank" aria-label="Amigo Active Solutions">Amigo Active Solutions</a> – where reflection meets language mastery.</p>
-            <p>
-               An intuitionally focused teacher, driven by the  organic senses of the student, with the concept of mindfulness, at its core, claims crisp comfort of the soul and mind to learn the academical /non-academical complexities at any given point of time.
-                I believe language... is a mirror to the soul. Through my own journey of learning and teaching, I've discovered how words help us name our feelings, build confidence, and connect deeply with ourselves.</p>
-            <a href="https://amigosolutions.github.io" class="cta-link" target="_blank" aria-label="Discover Amigo Active Solutions">Discover Amigo Active Solutions</a>
-        </div>
-    </section>
+<section id="about">
+<h2>About Alma Clara</h2>
+<div class="content">
+<p>Curated by <a href="https://amigosolutions.github.io" class="astrology-link" target="_blank" aria-label="Amigo Active Solutions">Amigo Active Solutions</a> – where reflection meets language mastery.</p>
+<p>
+An intuitionally focused teacher, driven by the organic senses of the student, with the concept of mindfulness at its core, claims crisp comfort of the soul and mind to learn the academical / non-academical complexities at any given point of time. I believe language... is a mirror to the soul. Through my own journey of learning and teaching, I've discovered how words help us name our feelings, build confidence, and connect deeply with ourselves.</p>
+<a href="https://amigosolutions.github.io" class="cta-link" target="_blank" aria-label="Discover Amigo Active Solutions">Discover Amigo Active Solutions</a>
+</div>
+</section>
 
-    <section id="astrology">
-        <h2>Vedic Insights</h2>
-        <div class="content">
-            <p>Discover Vedic Jyotish – the science of light – through <strong><a href="https://joyofjyotish.github.io" class="astrology-link" target="_blank" aria-label="Joy of Jyotish">Joy of Jyotish</a></strong>.</p>
-            <p>This dedicated platform offers contemplative resources for beginners, revealing the inner language of soul, destiny, and self-understanding through Vedic wisdom.</p>
-            <div class="disclaimer">
-                <p><strong>Purely Educational</strong> – No readings, predictions, or consultations offered.</p>
-            </div>
-        </div>
-    </section>
+<section id="astrology">
+<h2>Vedic Insights</h2>
+<div class="content">
+<p>Discover Vedic Jyotish – the science of light – through <strong><a href="https://joyofjyotish.github.io" class="astrology-link" target="_blank" aria-label="Joy of Jyotish">Joy of Jyotish</a></strong>.</p>
+<p>This dedicated platform offers contemplative resources for beginners, revealing the inner language of soul, destiny, and self-understanding through Vedic wisdom.</p>
+<div class="disclaimer">
+<p><strong>Purely Educational</strong> – No readings, predictions, or consultations offered.</p>
+</div>
+</div>
+</section>
 
-    <footer role="contentinfo">
-        © 2025 Alma Clara • 
-        <a href="https://amigosolutions.github.io" target="_blank">Amigo Active Solutions</a> • 
-        <a href="https://joyofjyotish.github.io" target="_blank">Joy of Jyotish</a>. 
-        All rights reserved.
-    </footer>
+<footer role="contentinfo">
+© 2025 Alma Clara • 
+<a href="https://amigosolutions.github.io" target="_blank">Amigo Active Solutions</a> • 
+<a href="https://joyofjyotish.github.io" target="_blank">Joy of Jyotish</a>. 
+All rights reserved.
+</footer>
+
+<script>
+// Smooth scroll for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+if (targetSection) {
+window.scrollTo({
+top: targetSection.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+observer.observe(section);
+});
+
+// Initialize first section as visible
+document.querySelector('section').classList.add('visible');
+</script>
 </body>
 </html>
